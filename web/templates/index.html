@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Arabic Sign Language Translator</title>
+
+  <link
+    rel="stylesheet"
+    href="/static/style.css"
+  >
+</head>
+
+<body>
+  <main class="app-container">
+
+    <header class="page-header">
+      <p class="eyebrow">
+        AI Sign Language Translation
+      </p>
+
+      <h1>
+        Arabic Sign Language Translator
+      </h1>
+
+      <p class="description">
+        Choose a language, perform the signs, then press
+        the same button again to stop and translate.
+      </p>
+    </header>
+
+    <section class="translator-card">
+
+      <div class="camera-container">
+        <video
+          id="cameraVideo"
+          autoplay
+          muted
+          playsinline
+        ></video>
+
+        <canvas
+          id="captureCanvas"
+          hidden
+        ></canvas>
+
+        <div
+          id="cameraPlaceholder"
+          class="camera-placeholder"
+        >
+          Camera is off
+        </div>
+
+        <div
+          id="recordingBadge"
+          class="recording-badge hidden"
+        >
+          <span class="recording-dot"></span>
+          Recording
+        </div>
+      </div>
+
+      <div class="status-panel">
+        <div class="status-row">
+          <span>Status</span>
+
+          <strong id="statusText">
+            Choose a translation language
+          </strong>
+        </div>
+
+        <div class="status-row">
+          <span>Expected sign</span>
+
+          <strong id="expectedText">
+            -
+          </strong>
+        </div>
+
+        <div class="status-row">
+          <span>Detected sign</span>
+
+          <strong id="predictionText">
+            -
+          </strong>
+        </div>
+
+        <div class="status-row">
+          <span>Confidence</span>
+
+          <strong id="confidenceText">
+            0%
+          </strong>
+        </div>
+
+        <div class="progress-track">
+          <div
+            id="progressBar"
+            class="progress-bar"
+          ></div>
+        </div>
+      </div>
+
+      <section class="sequence-section">
+        <span class="section-label">
+          Recognized signs
+        </span>
+
+        <p id="sequenceText">
+          No signs recognized yet
+        </p>
+      </section>
+
+      <section class="result-section">
+        <article class="result-box">
+          <span class="section-label">
+            Arabic
+          </span>
+
+          <p
+            id="arabicResult"
+            class="arabic-result"
+          >
+            -
+          </p>
+        </article>
+
+        <article class="result-box">
+          <span
+            id="translatedLanguageLabel"
+            class="section-label"
+          >
+            Translation
+          </span>
+
+          <p id="translatedResult">
+            -
+          </p>
+        </article>
+      </section>
+
+      <div class="button-group">
+        <button
+          id="englishButton"
+          class="translation-button english-button"
+          type="button"
+        >
+          Start English Translation
+        </button>
+
+        <button
+          id="germanButton"
+          class="translation-button german-button"
+          type="button"
+        >
+          Start German Translation
+        </button>
+      </div>
+
+      <p id="messageText" class="message-text"></p>
+
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
