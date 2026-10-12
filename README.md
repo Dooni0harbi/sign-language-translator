@@ -1944,6 +1944,16 @@ The project demonstrates practical work across:
 
 ---
 
+## Research and Development Status
+
+This repository contains the main implementation of my Arabic Sign Language Translator.
+
+I am continuing to develop the project and document my earlier experiments with static and dynamic gestures, timing parameters, confidence thresholds, and gesture exclusion rules.
+
+Some experimental versions and evaluation results are not included in this repository. I am currently organizing my work into a research report, with the aim of making the methods and results easier to understand and reproduce.
+
+I plan to share additional code and findings after completing the experiments and reviewing the results.
+
 ## Author
 
 Wejdan AlHarby
